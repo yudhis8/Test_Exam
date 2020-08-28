@@ -1,0 +1,9 @@
+{
+  "general": {},
+  "development": {
+    "apiUrl": "https://dev.dispenda.online/api"
+  },
+  "production": {
+    "apiUrl": "https://dev.dispenda.online/api"
+  }
+}
