@@ -20,7 +20,7 @@ import {
 import Colors from '../../../config/colors';
 import {randomCode, postCode} from './../../../api/code';
 import styles from './style';
-const App = () => {
+const App = (props) => {
   const [loading, setLoading] = useState(true);
   const [number, setNumber] = useState('');
   const [error, setError] = useState('');
@@ -69,6 +69,7 @@ const App = () => {
       };
       const postRandomCode = await postCode(data);
       console.log('App -> postRandomCode', postRandomCode);
+      props.navigation.navigate('NextScreen');
     } catch (error) {
       console.log(error.response.data.message['code']);
       setError(error.response.data.message['code']);
